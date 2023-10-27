@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import MenuItem
 
-# Register your models here.
+
+@admin.register(MenuItem)
+class AdminMenu(admin.ModelAdmin):
+    fields = 'title', 'parent', 'url', 'named_url', 'menu_name'
