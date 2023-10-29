@@ -1,0 +1,21 @@
+{% load draw_menu %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+</head>
+<body>
+  <h1>My cool site</h1>
+  <ul>
+    {% draw_menu 'main_menu' request.path %}
+  </ul>
+
+
+
+  <p>............ text........</p>
+  {% lorem 3 p random %}
+
+  {% draw_menu 'seasons' request.path %}
+</body>
+</html>
